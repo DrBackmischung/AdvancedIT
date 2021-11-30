@@ -1,2 +1,2 @@
-# AdvancedIT-Shell
-Advanced IT: Shell
+# AdvancedIT
+Advanced IT
