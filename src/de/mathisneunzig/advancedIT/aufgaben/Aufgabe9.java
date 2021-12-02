@@ -27,34 +27,35 @@ public class Aufgabe9 {
 			Ausschnitt des Arrays er bearbeiten muss.
 			(c) Diskutieren Sie die Ergebnisse!
 		 */
-		
+
+		int[] liste = init();
+		System.out.println("Fertig!");
 		System.out.println("=========================================");
-		calculate(1);
+		calculate(liste, 1);
 		System.out.println("=========================================");
-		calculate(2);
+		calculate(liste, 2);
 		System.out.println("=========================================");
-		calculate(4);
+		calculate(liste, 4);
 		System.out.println("=========================================");
-		calculate(8);
+		calculate(liste, 8);
 		System.out.println("=========================================");
-		calculate(16);
+		calculate(liste, 16);
 		System.out.println("=========================================");
-		calculate(32);
+		calculate(liste, 32);
 		System.out.println("=========================================");
-		calculate(64);
+		calculate(liste, 64);
 		System.out.println("=========================================");
-		calculate(128);
+		calculate(liste, 128);
 		System.out.println("=========================================");
 		
 	}
 	
-	public static void calculate(int anzahlWorker) throws InterruptedException {
+	public static void calculate(int[] liste, int anzahlWorker) throws InterruptedException {
 		
 		System.out.println("Berechnung mit "+anzahlWorker+" Thread(s):");
 		System.out.print("Vorbereitung...");
-		int[] liste = init();
 		System.out.println("abgeschlossen!");
-		long start = System.currentTimeMillis();
+		long start = System.nanoTime();
 		System.out.println("Startzeit: "+start);
 		
 		List<Aufgabe9Thread> l = new ArrayList<>();
@@ -78,9 +79,9 @@ public class Aufgabe9 {
 		
 		System.out.println("Ergebnis: "+r);
 		
-		long end = System.currentTimeMillis();
+		long end = System.nanoTime();
 		System.out.println("Endzeit: "+end);
-		System.out.println("Dauer: "+(end-start)+"ms");
+		System.out.println("Dauer: "+(end-start)+"ns");
 		
 	}
 	
