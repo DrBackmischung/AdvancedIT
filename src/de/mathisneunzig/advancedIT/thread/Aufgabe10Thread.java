@@ -14,11 +14,15 @@ public class Aufgabe10Thread extends Thread {
 
     public void run() {
     	
-    	for(int i = 0; i<= 100; i++) {
-    		System.out.println("Put: "+id+": "+i);
-    		q.put(""+i);
-    		System.out.println("Get: "+id+": "+q.get());
-    	}
+    	try {
+    		for(int i = 0; i<= 10; i++) {
+	    		System.out.println("Put: "+id+": "+i);
+	    		q.put(""+i);
+	    		System.out.println("Get: "+id+": "+q.get());
+    		}
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
     	
     }
 	

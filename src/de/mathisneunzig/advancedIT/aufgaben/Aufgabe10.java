@@ -14,15 +14,15 @@ public class Aufgabe10 {
 		
 		List<Aufgabe10Thread> l = new ArrayList<>();
 		
-		for(int i = 0; i<2; i++) {
+		for(int i = 0; i<4; i++) {
 			Aufgabe10Thread t = new Aufgabe10Thread(i+1, queue);
 			l.add(t);
 			t.start();
 		}
 		
-//		for(int i = 0; i<l.size(); i++) {
-//			l.get(i).join();
-//		}
+		for(int i = 0; i<l.size(); i++) {
+			l.get(i).join();
+		}
 		
 	}
 	

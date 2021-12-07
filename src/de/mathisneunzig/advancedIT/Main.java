@@ -17,8 +17,14 @@ public class Main {
 //		}
 		
 		try {
-			Aufgabe10.start();
-		} catch (InterruptedException e) {
+			for(int i = 0; i<=1; i++) {
+				try {
+					Aufgabe10.start();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
 		
