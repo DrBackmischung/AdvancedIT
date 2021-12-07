@@ -9,9 +9,15 @@ public class Main {
 		
 //		Aufgabe8.start();
 		
+//		try {
+//			System.out.print("Start Aufgabe 9...");
+//			Aufgabe9.start();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+		
 		try {
-			System.out.print("Start Aufgabe 9...");
-			Aufgabe9.start();
+			Aufgabe10.start();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
