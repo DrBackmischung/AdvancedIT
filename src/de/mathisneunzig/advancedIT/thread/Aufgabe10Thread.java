@@ -15,9 +15,22 @@ public class Aufgabe10Thread extends Thread {
     public void run() {
     	
     	try {
-    		for(int i = 0; i<= 10; i++) {
+    		for(int i = 0; i<= 10; i+=4) {
 	    		System.out.println("Put: "+id+": "+i);
 	    		q.put(""+i);
+	    		i++;
+	    		System.out.println("Put: "+id+": "+i);
+	    		q.put(""+i);
+	    		i++;
+	    		System.out.println("Put: "+id+": "+i);
+	    		q.put(""+i);
+	    		i++;
+	    		System.out.println("Get: "+id+": "+q.get());
+	    		System.out.println("Get: "+id+": "+q.get());
+	    		System.out.println("Get: "+id+": "+q.get());
+	    		System.out.println("Put: "+id+": "+i);
+	    		q.put(""+i);
+	    		i++;
 	    		System.out.println("Get: "+id+": "+q.get());
     		}
 		} catch (NullPointerException e) {
