@@ -55,7 +55,8 @@ public class Aufgabe9 {
 		System.out.println("Berechnung mit "+anzahlWorker+" Thread(s):");
 		System.out.print("Vorbereitung...");
 		System.out.println("abgeschlossen!");
-		long start = System.nanoTime();
+		
+		long start = System.currentTimeMillis();
 		System.out.println("Startzeit: "+start);
 		
 		List<Aufgabe9Thread> l = new ArrayList<>();
@@ -79,9 +80,9 @@ public class Aufgabe9 {
 		
 		System.out.println("Ergebnis: "+r);
 		
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		System.out.println("Endzeit: "+end);
-		System.out.println("Dauer: "+(end-start)+"ns");
+		System.out.println("Dauer: "+(end-start)+"ms");
 		
 	}
 	
@@ -89,7 +90,7 @@ public class Aufgabe9 {
 		Random r = new Random();
 		int[] liste = new int[size];
 		for(int i = 0; i<liste.length; i++) {
-			liste[i] = r.nextInt(5);
+			liste[i] = r.nextInt(200);
 //			liste[i] = 10;
 		}
 		return liste;
