@@ -9,9 +9,6 @@ import de.mathisneunzig.advancedIT.thread.Aufgabe9Thread;
 public class Aufgabe9 {
 	
 	private static int size = 262144000*2*2;
-//	private static int size = 262144000*2;
-//	private static int size = 262144000;
-//	private static int size = 262144000/2;
 	
 	public static void start() throws InterruptedException {
 		
@@ -91,7 +88,6 @@ public class Aufgabe9 {
 		int[] liste = new int[size];
 		for(int i = 0; i<liste.length; i++) {
 			liste[i] = r.nextInt(200);
-//			liste[i] = 10;
 		}
 		return liste;
 	}
