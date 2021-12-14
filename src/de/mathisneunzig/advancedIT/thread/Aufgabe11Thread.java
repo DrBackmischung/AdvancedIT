@@ -1,16 +1,15 @@
 package de.mathisneunzig.advancedIT.thread;
 
-import java.util.concurrent.Semaphore;
-
+import de.mathisneunzig.advancedIT.util.Gabel;
 import de.mathisneunzig.advancedIT.util.Philosoph;
 
 public class Aufgabe11Thread extends Thread {
 	
 	private int id;
 	private Philosoph p;
-	private Semaphore links, rechts;
+	private Gabel links, rechts;
 	
-	public Aufgabe11Thread(int id, Philosoph p, Semaphore links, Semaphore rechts) {
+	public Aufgabe11Thread(int id, Philosoph p, Gabel links, Gabel rechts) {
 		this.id = id;
 		this.p = p;
 		this.links = links;
