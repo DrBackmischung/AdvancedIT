@@ -1,19 +1,18 @@
 package de.mathisneunzig.advancedIT.aufgaben;
 
-import java.util.concurrent.Semaphore;
-
 import de.mathisneunzig.advancedIT.thread.Aufgabe11Thread;
+import de.mathisneunzig.advancedIT.util.Gabel;
 import de.mathisneunzig.advancedIT.util.Philosoph;
 
 public class Aufgabe11 {
 	
 	public static void start() throws InterruptedException {
 
-		Semaphore sk = new Semaphore(1, true);
-		Semaphore kf = new Semaphore(1, true);
-		Semaphore fp = new Semaphore(1, true);
-		Semaphore pa = new Semaphore(1, true);
-		Semaphore as = new Semaphore(1, true);
+		Gabel sk = new Gabel(1, true);
+		Gabel kf = new Gabel(1, true);
+		Gabel fp = new Gabel(1, true);
+		Gabel pa = new Gabel(1, true);
+		Gabel as = new Gabel(1, true);
 		
 		Aufgabe11Thread s = new Aufgabe11Thread(1, new Philosoph('S', "Sokrates"), as, sk);
 		Aufgabe11Thread k = new Aufgabe11Thread(2, new Philosoph('K', "Kant"), sk, kf);

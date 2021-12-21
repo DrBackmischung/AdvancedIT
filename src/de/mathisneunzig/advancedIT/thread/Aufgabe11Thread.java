@@ -9,6 +9,10 @@ public class Aufgabe11Thread extends Thread {
 	private Philosoph p;
 	private Gabel links, rechts;
 	
+	public static final int DENKEN = 0;
+	public static final int HUNGER = 1;
+	public static final int ESSEN = 2;
+	
 	public Aufgabe11Thread(int id, Philosoph p, Gabel links, Gabel rechts) {
 		this.id = id;
 		this.p = p;
