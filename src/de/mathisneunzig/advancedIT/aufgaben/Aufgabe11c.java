@@ -7,6 +7,17 @@ import de.mathisneunzig.advancedIT.util.Philosoph;
 
 public class Aufgabe11c {
 	
+	/*
+	 * Aufgabe 11 (Bearbeitungszeit: max. 90 min)
+	  	Fu¨nf Philosophen sitzen gemeinsam an einem runden Tisch, an dem sie unabh¨angig voneinander von Zeit
+		zu Zeit Spaghetti essen. Jeder Philosoph hat rechts neben seinem Teller nur eine Gabel, ben¨otigt aber zum
+		Essen zwei Gabeln, also auch die seines linken Nachbarn. Aus diesem Grund k¨onnen nicht alle Philosophen
+		gleichzeitig essen, sondern sie mu¨ssen sich bezu¨glich ihrer kritischen Abschnitte Essen synchronisieren
+		
+		c) Entwerfen Sie eine zweite L¨osung unter Verwendung des Konzepts der privaten Semaphore. Gehen
+		Sie davon aus, dass ein Philosoph zyklisch die Zust¨ande denkend, hungrig, essend durchlebt.
+	 */
+	
 	public static Semaphore[] p = new Semaphore[5];
 	public static Semaphore mutex = new Semaphore(1, true);
 	public static int[] zustand = new int[5];

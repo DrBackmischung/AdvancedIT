@@ -6,6 +6,18 @@ import de.mathisneunzig.advancedIT.util.Philosoph;
 
 public class Aufgabe11 {
 	
+	/*
+	 * Aufgabe 11 (Bearbeitungszeit: max. 90 min)
+	  	Fu¨nf Philosophen sitzen gemeinsam an einem runden Tisch, an dem sie unabh¨angig voneinander von Zeit
+		zu Zeit Spaghetti essen. Jeder Philosoph hat rechts neben seinem Teller nur eine Gabel, ben¨otigt aber zum
+		Essen zwei Gabeln, also auch die seines linken Nachbarn. Aus diesem Grund k¨onnen nicht alle Philosophen
+		gleichzeitig essen, sondern sie mu¨ssen sich bezu¨glich ihrer kritischen Abschnitte Essen synchronisieren
+		
+		a) Formulieren Sie die Synchronisationsbedingungen mittels eines Synchronisationsgraphen.
+		b) Geben Sie Java-L¨osungen unter Verwendung des Semaphorkonzepts an, wobei Sie die Philosophen
+		jeweils als Threads implementieren sollten.
+	 */
+	
 	public static void start() throws InterruptedException {
 
 		Gabel sk = new Gabel(1, true);
