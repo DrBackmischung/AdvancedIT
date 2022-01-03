@@ -27,7 +27,7 @@ public class Aufgabe11cThread extends Thread {
     		try {
             	
             	System.out.println(p.getName()+" ("+p.getC()+") denkt nach...");
-            	sleep(2000);
+            	sleep((int) (Math.random() * 4000));
     	    	System.out.println(p.getName()+" ("+p.getC()+") hat jetzt hunger!");
     	    	Aufgabe11c.mutex.acquire();
     	    	
