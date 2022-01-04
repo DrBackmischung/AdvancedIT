@@ -1,6 +1,7 @@
 package de.mathisneunzig.advancedIT;
 
 import de.mathisneunzig.advancedIT.aufgaben.Aufgabe11c;
+import de.mathisneunzig.advancedIT.aufgaben.Aufgabe12;
 
 public class Main {
 	
@@ -34,9 +35,16 @@ public class Main {
 //			e.printStackTrace();
 //		}
 		
+//		try {
+//			Aufgabe11c.start();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+		
 		try {
-			Aufgabe11c.start();
+			Aufgabe12.start();
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
