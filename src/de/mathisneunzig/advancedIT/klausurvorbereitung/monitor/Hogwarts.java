@@ -3,7 +3,8 @@ package de.mathisneunzig.advancedIT.klausurvorbereitung.monitor;
 public class Hogwarts {
 	
 	/**
-	 * Beispiel: Alle 4 Häuser wollen gleichzeitig zaubern
+	 * Beispiel: Alle 4 Häuser wollen gleichzeitig zaubern.
+	 * G < S < R < H ist die Priorisierung
 	 */
 	
 	private final int Gryffindor = 0;
