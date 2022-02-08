@@ -17,6 +17,7 @@ public class Stack {
 	
 	Semaphore empty = null;
 	Semaphore full = new Semaphore(0, true);
+	Semaphore mutex = new Semaphore(1, true);
 	
 	public Stack(int max) {
 		this.max = max;
@@ -27,8 +28,10 @@ public class Stack {
 	public void push(Object o) {
 		try {
 			empty.acquire();
+			mutex.aquire();
 			stack[element] = o;
 			element ++;
+			mutex.release();
 			full.release();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -38,8 +41,10 @@ public class Stack {
 	public Object pop() {
 		try {
 			full.acquire();
+			mutex.aquire();
 			Object o = stack[element];
 			element--;
+			mutex.release();
 			empty.release();
 			return o;
 		} catch (InterruptedException e) {
